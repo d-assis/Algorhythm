@@ -1,19 +1,41 @@
 programa
-{
+{	
+	real spent[20]
+	inteiro tp, index = 1
+	cadeia part[20] 
 
 	funcao inicio()
 	{	
 		//A ideia do programa é "nivelar" diferenças de contribuição em compras e eventos de grupo. Seguem os passos para a resolução do problema
 
-		//1. solicitar ao usuário o número de participantes do rateio
+		escreva("|========================|\n")
+
+		escreva("|      MULTISPLITER      |\n")
+
+		escreva("|========================|\n")
+
+		escreva("Bem vindo ao divisor de contas! \n")
 		
+		//1. solicitar ao usuário o número de participantes do rateio
+
+		escreva("Quantas pessoas participarão do rateio? \n")
+
+		leia(tp)
+
 		// loop com iterações igual ao número de participantes
+		enquanto(index <= tp){
 			
 			//2. solicitar ao usuário o nome de um dos participantes
+			escreva("Qual o nome do ", index, "° participante? \n")
+			leia(part[index])
 
 			//3. solicitar ao usuário o valor de contribuição do último participante inserido
+			escreva("E quanto ", part[index]," gastou? \n")
+			leia(spent[index])
 
 		//fim do loop
+			index = index + 1
+		}
 
 		//4. somar todos os valores de contribuição e armazenar total numa variável
 
@@ -37,7 +59,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1089; 
+ * @POSICAO-CURSOR = 1603; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
