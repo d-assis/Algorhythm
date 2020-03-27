@@ -1,0 +1,49 @@
+/* primeiro arquivo css */
+
+/*TAGS*/
+body {
+	color: #e2ba5d ;
+	background-color: #222f44;
+	font-family: "comic sans MS";
+	font-size: 30px;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	background-color: #80bde5;
+	font-family: "papyrus";
+	min-height: 100px;
+}
+
+footer{
+	clear: both;
+	background-color: #097765;
+}
+
+/*IDs*/
+
+#divL {
+	background-color: #c1e6ff;
+	min-height: 200px;
+	width: 60%;
+	float: left;
+}
+
+#divR {
+	background-color: #01e6ff;
+	min-height: 200px;
+	width: 40%;
+	float: right;
+}
+
+/*CLASS*/
+
+.container{
+	width: 960px;
+	margin: auto;
+
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coinflip game</title>
+</head>
+<body>
+
+<h1> Coinflip game </h1>
+
+	<script type="text/javascript">
+		
+		// solicitando número ao jogador 1
+		var n1 = prompt("jogador 1, por favor digite um número");
+
+		n1 = parseInt(n1);
+
+		// registrando no console o número digitado pelo jogador 1
+		console.log( "jogador 1 = ", n1 );
+		
+		// solicitando número ao jogador 2
+		var n2 = prompt("jogador 2, por favor digite um número");
+
+		n2 = parseInt(n2);
+
+		// registrando no console o número digitado pelo jogador 2
+		console.log( "jogador 2 = ", n2 );
+
+		// se os jogadores digitarem o mesmo número
+		if (n1 == n2){
+
+			alert("Empate!");
+
+		}
+
+		// caso contrário, verificar a variável "coin" pra definir o vencedor.
+		else {
+
+			var coin = parseInt( Math.random() * 2 ); 
+
+			// registro em console da variável coin
+			console.log( coin );
+
+			// se coin for 0, quem digitou o menor número vence
+			if ( coin == 0 ){
+
+				if (n1 < n2){
+
+					alert("jogador 1 venceu!");
+
+					console.log("jogador 1 venceu!");
+				}
+				
+				else {
+
+					alert("jogador 2 venceu!");
+
+					console.log("jogador 2 venceu!");
+				}
+
+			}
+
+			// se coin for 1, quem digitou o maior número vence
+			else {
+
+				if(n1 > n2) {
+
+					alert("jogador 1 venceu!");
+
+					console.log("jogador 1 venceu!");
+
+				}
+				
+				else {
+
+					alert("jogador 2 venceu!");
+
+					console.log("jogador 2 venceu!");
+				}
+			}
+
+
+		}
+
+	</script>
+
+</body>
+</html>

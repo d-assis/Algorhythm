@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Logica com javascript</title>
+</head>
+<body>
+
+	<h1>Aula de lógica de programação com javascript</h1>
+
+	<script type="text/javascript">
+	
+		//Solicitar um número ao usuário;
+		var n1 = prompt("Olá, por favor digite um número");
+
+		//Converter primeiro input de string para número;
+		n1 = parseFloat(n1);
+
+		//Solicitar outro número ao usuário;
+		var n2 = prompt("Obrigado, por favor digite outro número");
+
+		//Converter segundo input de string para número;
+		n2 = parseFloat(n2);
+
+		//Criar média entre os números inseridos;
+		var media = ((n1 + n2) / 2);
+
+		//Indicar com um dado boolean se a média dos números inseridos é maior que 5;
+		alert("Sua média é: " + media );
+
+		if((media > 5) = true) {
+			alert("Parabéns, você foi aprovado!")
+		}
+		else {
+			alert("Infelizmente você foi reprovado, mais sorte na próxima!")
+		}
+
+	</script>
+
+</body>
+</html>
