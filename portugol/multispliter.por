@@ -1,6 +1,7 @@
 programa
 {	
-	real spent[20]
+	//TODO: padronizar os nomes de variáveis
+	real spent[20], sum = 0, idv = 0, bal[20]
 	inteiro tp, index = 1
 	cadeia part[20] 
 
@@ -33,24 +34,56 @@ programa
 			escreva("E quanto ", part[index]," gastou? \n")
 			leia(spent[index])
 
+			//4. somar todos os valores de contribuição e armazenar total numa variável
+			sum = sum + (spent[index])
+
 		//fim do loop
 			index = index + 1
 		}
 
-		//4. somar todos os valores de contribuição e armazenar total numa variável
-
+		index = 1
+		
 		//5. dividir total pelo número de participantes para descobrir valor da divisão, armazenar o valor numa variável
+		idv = sum / tp
 
 		//loop com iterações igual ao número de participantes
-		
-			//6. subtrair o valor da divisão pelo valor de contribuição de um participante, guardar o valor numa variável
-			//7. caso o valor seja positivo classificar o participante como devedor
-			//8.	caso contrário lassificar o participante como credor
-
+		enquanto(index <= tp){
+			
+			//6. subtrair do valor de contribuição de um participante o valor da divisão, guardar o resultado numa variável
+			bal[index] = spent[index] - idv
+			//7. caso o valor seja positivo classificar o participante como credor
+			se(bal[index] > 0){
+				part[index] = part[index] + " (credor)"
+				}
+				//8.	caso o valor seja negativo classificar o participante como devedor 
+				senao{
+						se(bal[index] < 0){
+							part[index] = part[index] + " (devedor)"
+							}
+							//9. caso contrário classificar como quitado
+							senao{
+									part[index] = part[index] + " (quitado)"
+								}
+					}
+			
 		//fim do loop
+		index = index + 1
+		}
 
-		//9. exibir na tela as informações: total gasto, valor de divisão, valores a pagar entre usuários
-		
+		//9. exibir na tela as informações: total gasto, valor de divisão, valores a pagar e receber entre usuários
+		escreva("O total gasto foi de ", sum," e o valor ideal por participante é de ", idv," \n")
+
+		escreva("============================================================================ \n")
+
+		index = 1
+		enquanto(index <= tp){
+			escreva(part[index], " seu saldo é de ", bal[index], "\n" )
+
+			escreva("----------------------------------------------------------------------- \n")
+
+			index = index + 1
+		}
+		//TODO: implementar pareamento de credores e devedores
 
 	}
 }
@@ -59,7 +92,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1603; 
+ * @POSICAO-CURSOR = 2393; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
