@@ -1,9 +1,10 @@
 programa
 {	
 	//TODO: padronizar os nomes de variáveis
-	real spent[20], sum = 0, idv = 0, bal[20]
-	inteiro tp, index = 1
+	real sum = 0, idv = 0 , spent[20], bal[20]
+	inteiro tp = 0 , index = 1
 	cadeia part[20] 
+	
 
 	funcao inicio()
 	{	
@@ -92,7 +93,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2393; 
+ * @POSICAO-CURSOR = 1118; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
