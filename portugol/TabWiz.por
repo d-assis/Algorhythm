@@ -1,8 +1,7 @@
 programa
 {	
-	//TODO: padronizar os nomes de variáveis
-	real sum = 0, idv = 0 , spent[20], bal[20]
-	inteiro tp = 0 , index = 1
+	real soma = 0, valm = 0 , valg[20], valf[20]
+	inteiro totp = 0 , C = 1
 	cadeia part[20] 
 	
 
@@ -10,11 +9,11 @@ programa
 	{	
 		//A ideia do programa é "nivelar" diferenças de contribuição em compras e eventos de grupo. Seguem os passos para a resolução do problema
 
-		escreva("|========================|\n")
+		escreva("|==================|\n")
 
-		escreva("|      MULTISPLITER      |\n")
+		escreva("|      TABWIZ      |\n")
 
-		escreva("|========================|\n")
+		escreva("|==================|\n")
 
 		escreva("Bem vindo ao divisor de contas! \n")
 		
@@ -22,67 +21,67 @@ programa
 
 		escreva("Quantas pessoas participarão do rateio? \n")
 
-		leia(tp)
+		leia(totp)
 
 		// loop com iterações igual ao número de participantes
-		enquanto(index <= tp){
+		enquanto(C <= totp){
 			
 			//2. solicitar ao usuário o nome de um dos participantes
-			escreva("Qual o nome do ", index, "° participante? \n")
-			leia(part[index])
+			escreva("Qual o nome do ", C, "° participante? \n")
+			leia(part[C])
 
 			//3. solicitar ao usuário o valor de contribuição do último participante inserido
-			escreva("E quanto ", part[index]," gastou? \n")
-			leia(spent[index])
+			escreva("E quanto ", part[C]," gastou? \n")
+			leia(valg[C])
 
 			//4. somar todos os valores de contribuição e armazenar total numa variável
-			sum = sum + (spent[index])
+			soma = soma + (valg[C])
 
 		//fim do loop
-			index = index + 1
+			C = C + 1
 		}
 
-		index = 1
+		C = 1
 		
 		//5. dividir total pelo número de participantes para descobrir valor da divisão, armazenar o valor numa variável
-		idv = sum / tp
+		valm = soma / totp
 
 		//loop com iterações igual ao número de participantes
-		enquanto(index <= tp){
+		enquanto(C <= totp){
 			
 			//6. subtrair do valor de contribuição de um participante o valor da divisão, guardar o resultado numa variável
-			bal[index] = spent[index] - idv
+			valf[C] = valg[C] - valm
 			//7. caso o valor seja positivo classificar o participante como credor
-			se(bal[index] > 0){
-				part[index] = part[index] + " (credor)"
+			se(valf[C] > 0){
+				part[C] = part[C] + " (credor)"
 				}
 				//8.	caso o valor seja negativo classificar o participante como devedor 
 				senao{
-						se(bal[index] < 0){
-							part[index] = part[index] + " (devedor)"
+						se(valf[C] < 0){
+							part[C] = part[C] + " (devedor)"
 							}
 							//9. caso contrário classificar como quitado
 							senao{
-									part[index] = part[index] + " (quitado)"
+									part[C] = part[C] + " (quitado)"
 								}
 					}
 			
 		//fim do loop
-		index = index + 1
+		C = C + 1
 		}
 
 		//9. exibir na tela as informações: total gasto, valor de divisão, valores a pagar e receber entre usuários
-		escreva("O total gasto foi de ", sum," e o valor ideal por participante é de ", idv," \n")
+		escreva("O total gasto foi de ", soma," e o valor ideal por participante é de ", valm," \n")
 
 		escreva("============================================================================ \n")
 
-		index = 1
-		enquanto(index <= tp){
-			escreva(part[index], " seu saldo é de ", bal[index], "\n" )
+		C = 1
+		enquanto(C <= totp){
+			escreva(part[C], " seu saldo é de ", valf[C], "\n" )
 
 			escreva("----------------------------------------------------------------------- \n")
 
-			index = index + 1
+			C = C + 1
 		}
 		//TODO: implementar pareamento de credores e devedores
 
@@ -93,7 +92,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1118; 
+ * @POSICAO-CURSOR = 549; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
