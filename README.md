@@ -5,7 +5,7 @@ Um amontoado de programas feitos para praticar algoritimos
 Olá visitante, esse repositório tem como objetivo agregar meus **primeiros contatos e estudos** feitos com **lógica e linguagens de programação.**  
 Aqui você vai encontrar:
 - exercícios em diferentes linguagens (Js, Python, portugol)
-- práticas livres de programação (tabwiz por exemplo)
+- práticas livres como o programa **tabwiz.por**, presente na pasta portugol
 - práticas e exercícios introdutórios de linguagem de marcação (HTML e markdown) assim como estilos (CSS)
 
 ## Informações úteis
